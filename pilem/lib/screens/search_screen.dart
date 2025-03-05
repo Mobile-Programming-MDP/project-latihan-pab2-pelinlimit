@@ -66,7 +66,7 @@ class SearchScreenState extends State<SearchScreen> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller: searchController,
+                      controller: SearchController(),
                       decoration: const InputDecoration(
                         hintText: 'Search movies...',
                         border: InputBorder.none,

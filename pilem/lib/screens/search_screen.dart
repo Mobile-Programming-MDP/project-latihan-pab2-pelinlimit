@@ -19,23 +19,20 @@ class SearchScreenState extends State<SearchScreen> {
     super.initState();
     _searchController.addListener(_searchMovies);
   }
-
   @override
   void dispose() {
     _searchController.dispose();
     super.dispose();
   }
-
   void _searchMovies() async {
     if (_searchController.text.isEmpty) {
       setState(() {
         _searchResults.clear();
       });
-      return; // Perbaikan: Menutup blok if dengan return
-    }
+    return;
+  }
 
-    final List<Map<String, dynamic>> searchData =
-        await _apiService.searchMovies(_searchController.text);
+    final List<Map<String, dynamic>> searchData = await _apiService.searchMovies(_searchController.text);
     setState(() {
       _searchResults = searchData.map((e) => Movie.fromJson(e)).toList();
     });
@@ -55,8 +52,8 @@ class SearchScreenState extends State<SearchScreen> {
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.grey,
-                  width: 1.0,
+                color: Colors.grey,
+                width: 1.0,
                 ),
                 borderRadius: BorderRadius.circular(5.0),
               ),
@@ -64,13 +61,14 @@ class SearchScreenState extends State<SearchScreen> {
                 children: [
                   Expanded(
                     child: TextField(
-                      controller: _searchController, // Perbaikan: Memastikan controller benar
+                      controller: _searchController,
                       decoration: const InputDecoration(
                         hintText: 'Search movies...',
                         border: InputBorder.none,
                       ),
                     ),
                   ),
+
                   Visibility(
                     visible: _searchController.text.isNotEmpty,
                     child: IconButton(
@@ -95,8 +93,7 @@ class SearchScreenState extends State<SearchScreen> {
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 4),
                     child: ListTile(
-                      leading: Image.network(
-                        'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                      leading: Image.network('https://image.tmdb.org/t/p/w500${movie.posterPath}',
                         height: 50,
                         width: 50,
                         fit: BoxFit.cover,
@@ -106,7 +103,7 @@ class SearchScreenState extends State<SearchScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => DetailScreen(movie: movie),
+                            builder: (context) => DetailScreen(movie:movie),
                           ),
                         );
                       },

@@ -46,31 +46,32 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC6tsvjI0xcxbKmqztCB3QlEMQTc_WM-N0',
-    appId: '1:1011631212965:web:7d081e45652c7d844ac04c',
-    messagingSenderId: '1011631212965',
-    projectId: 'fasum-apps-43898',
-    authDomain: 'fasum-apps-43898.firebaseapp.com',
-    storageBucket: 'fasum-apps-43898.firebasestorage.app',
-    measurementId: 'G-MGDPBDLHJN',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyABXE7We1evTcJm5ahJzA8BOwLjTLVFwwk',
-    appId: '1:1011631212965:android:5be842d667b255f64ac04c',
-    messagingSenderId: '1011631212965',
-    projectId: 'fasum-apps-43898',
-    storageBucket: 'fasum-apps-43898.firebasestorage.app',
+    apiKey: 'AIzaSyAM-FEPQOljw-iD5o9XgdiiLa3WwPRwc_M',
+    appId: '1:531583580649:android:d1d4f84a139e39021cf378',
+    messagingSenderId: '531583580649',
+    projectId: 'fasum-app-c6315',
+    storageBucket: 'fasum-app-c6315.firebasestorage.app',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyC6tsvjI0xcxbKmqztCB3QlEMQTc_WM-N0',
-    appId: '1:1011631212965:web:a9512b804f72bd4c4ac04c',
-    messagingSenderId: '1011631212965',
-    projectId: 'fasum-apps-43898',
-    authDomain: 'fasum-apps-43898.firebaseapp.com',
-    storageBucket: 'fasum-apps-43898.firebasestorage.app',
-    measurementId: 'G-HN5WMEKR6G',
+    apiKey: 'AIzaSyBk4CaHGfWFppofVPP99a3XjWdbVV-9aHA',
+    appId: '1:531583580649:web:6fb0fe8c814a82f31cf378',
+    messagingSenderId: '531583580649',
+    projectId: 'fasum-app-c6315',
+    authDomain: 'fasum-app-c6315.firebaseapp.com',
+    storageBucket: 'fasum-app-c6315.firebasestorage.app',
+    measurementId: 'G-H1X8PNMECG',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBk4CaHGfWFppofVPP99a3XjWdbVV-9aHA',
+    appId: '1:531583580649:web:6fb0fe8c814a82f31cf378',
+    messagingSenderId: '531583580649',
+    projectId: 'fasum-app-c6315',
+    authDomain: 'fasum-app-c6315.firebaseapp.com',
+    storageBucket: 'fasum-app-c6315.firebasestorage.app',
+    measurementId: 'G-H1X8PNMECG',
+  );
+
 }

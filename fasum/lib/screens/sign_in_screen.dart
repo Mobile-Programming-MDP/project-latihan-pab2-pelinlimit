@@ -5,10 +5,10 @@ import 'package:fasum/screens/sign_up_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key});
-
   @override
   SignInScreenState createState() => SignInScreenState();
 }
+
 class SignInScreenState extends State<SignInScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -50,7 +50,8 @@ class SignInScreenState extends State<SignInScreen> {
                       password: _passwordController.text,
                     );
                     Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
                     );
                   } catch (error) {
                     setState(() {
@@ -70,7 +71,8 @@ class SignInScreenState extends State<SignInScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => const SignUpScreen()),
                   );
                 },
                 child: const Text('Don\'t have an account? Sign up'),

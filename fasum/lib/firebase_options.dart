@@ -33,7 +33,10 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -46,32 +49,23 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAM-FEPQOljw-iD5o9XgdiiLa3WwPRwc_M',
-    appId: '1:531583580649:android:d1d4f84a139e39021cf378',
-    messagingSenderId: '531583580649',
-    projectId: 'fasum-app-c6315',
-    storageBucket: 'fasum-app-c6315.firebasestorage.app',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBk4CaHGfWFppofVPP99a3XjWdbVV-9aHA',
-    appId: '1:531583580649:web:6fb0fe8c814a82f31cf378',
-    messagingSenderId: '531583580649',
-    projectId: 'fasum-app-c6315',
-    authDomain: 'fasum-app-c6315.firebaseapp.com',
-    storageBucket: 'fasum-app-c6315.firebasestorage.app',
-    measurementId: 'G-H1X8PNMECG',
-  );
-
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBk4CaHGfWFppofVPP99a3XjWdbVV-9aHA',
-    appId: '1:531583580649:web:6fb0fe8c814a82f31cf378',
-    messagingSenderId: '531583580649',
-    projectId: 'fasum-app-c6315',
-    authDomain: 'fasum-app-c6315.firebaseapp.com',
-    storageBucket: 'fasum-app-c6315.firebasestorage.app',
-    measurementId: 'G-H1X8PNMECG',
+    apiKey: 'AIzaSyCeT93o9Xu3SHCzzN6l2mGDM8WUu5hrNUs',
+    appId: '1:297417949941:web:3288fe179b3121c020bbbc',
+    messagingSenderId: '297417949941',
+    projectId: 'fasum-j',
+    authDomain: 'fasum-j.firebaseapp.com',
+    databaseURL: 'https://fasum-j-default-rtdb.firebaseio.com',
+    storageBucket: 'fasum-j.firebasestorage.app',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCeT93o9Xu3SHCzzN6l2mGDM8WUu5hrNUs',
+    appId: '1:297417949941:android:a890c1698a91914920bbbc',
+    messagingSenderId: '297417949941',
+    projectId: 'fasum-j',
+    databaseURL: 'https://fasum-j-default-rtdb.firebaseio.com',
+    storageBucket: 'fasum-j.firebasestorage.app',
   );
 
 }
